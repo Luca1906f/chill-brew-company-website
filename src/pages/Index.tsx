@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
@@ -8,7 +7,8 @@ import AboutSection from '@/components/AboutSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 import ProductFeature from '@/components/ProductFeature';
-import { ThermometerSnowflake, ThermometerSun, Battery, Clock, Shield } from 'lucide-react';
+import { ThermometerSnowflake, ThermometerSun, Battery, Clock, Shield, Palette, Video } from 'lucide-react';
+import LookbookSection from '@/components/LookbookSection';
 
 const Index = () => {
   // Intersection Observer for scroll animations
@@ -61,8 +61,31 @@ const Index = () => {
                 <ProductFeature 
                   icon={<ThermometerSnowflake size={32} />} 
                   title="Cooling Technology" 
-                  description="Keep your cold drinks perfectly chilled for up to 8 hours, no matter the outside temperature. Our proprietary cooling system maintains the ideal temperature without freezing."
+                  description="Keep your cold drinks perfectly chilled for up to 8 hours, no matter the outside temperature."
                   iconBackground="bg-gradient-to-br from-blue-400 to-cool-blue"
+                  detailsContent={
+                    <div className="space-y-4">
+                      <p>Our proprietary cooling system maintains the ideal temperature between -15°C and -5°C without freezing. Perfect for smoothies, iced coffee, or water on hot summer days.</p>
+                      <div className="grid grid-cols-2 gap-2">
+                        <div className="frost-glass p-2 rounded flex items-center gap-2">
+                          <span className="text-cool-blue">●</span>
+                          <span className="text-sm">Precise temperature control</span>
+                        </div>
+                        <div className="frost-glass p-2 rounded flex items-center gap-2">
+                          <span className="text-cool-blue">●</span>
+                          <span className="text-sm">No ice needed</span>
+                        </div>
+                        <div className="frost-glass p-2 rounded flex items-center gap-2">
+                          <span className="text-cool-blue">●</span>
+                          <span className="text-sm">8+ hour battery life</span>
+                        </div>
+                        <div className="frost-glass p-2 rounded flex items-center gap-2">
+                          <span className="text-cool-blue">●</span>
+                          <span className="text-sm">Anti-condensation exterior</span>
+                        </div>
+                      </div>
+                    </div>
+                  }
                 />
               </div>
               
@@ -70,9 +93,32 @@ const Index = () => {
                 <ProductFeature 
                   icon={<ThermometerSun size={32} />} 
                   title="Heating Control" 
-                  description="Maintain your hot beverages at your preferred temperature for hours. Adjust the exact temperature via our companion app for the perfect sipping experience."
+                  description="Maintain your hot beverages at your preferred temperature for hours."
                   isReversed={true}
                   iconBackground="bg-gradient-to-br from-warm-red to-orange-400"
+                  detailsContent={
+                    <div className="space-y-4">
+                      <p>Adjust the exact temperature via our companion app for the perfect sipping experience. Our heating technology ensures your coffee, tea, or hot chocolate stays at your preferred temperature from 40°C to 75°C.</p>
+                      <div className="grid grid-cols-2 gap-2">
+                        <div className="frost-glass p-2 rounded flex items-center gap-2">
+                          <span className="text-warm-red">●</span>
+                          <span className="text-sm">Adjustable temperature</span>
+                        </div>
+                        <div className="frost-glass p-2 rounded flex items-center gap-2">
+                          <span className="text-warm-red">●</span>
+                          <span className="text-sm">Even heat distribution</span>
+                        </div>
+                        <div className="frost-glass p-2 rounded flex items-center gap-2">
+                          <span className="text-warm-red">●</span>
+                          <span className="text-sm">Temperature memory</span>
+                        </div>
+                        <div className="frost-glass p-2 rounded flex items-center gap-2">
+                          <span className="text-warm-red">●</span>
+                          <span className="text-sm">Safe touch exterior</span>
+                        </div>
+                      </div>
+                    </div>
+                  }
                 />
               </div>
               
@@ -108,7 +154,12 @@ const Index = () => {
         </section>
         
         <HowItWorks />
-        <CupDesigner />
+        <section id="design" className="py-16 md:py-24 bg-dark-gray">
+          <LookbookSection />
+          <div className="mt-16">
+            <CupDesigner />
+          </div>
+        </section>
         <AboutSection />
         <ContactSection />
       </main>
@@ -119,4 +170,3 @@ const Index = () => {
 };
 
 export default Index;
-
