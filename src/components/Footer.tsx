@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Instagram, TiktokIcon } from 'lucide-react';
+import { Instagram, Youtube } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -31,7 +31,7 @@ const Footer: React.FC = () => {
                 className="bg-white/10 hover:bg-white/20 p-2 rounded-md transition-colors"
                 aria-label="Follow us on TikTok"
               >
-                <TiktokIcon size={20} />
+                <Youtube size={20} />
               </a>
             </div>
           </div>
