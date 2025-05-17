@@ -40,7 +40,7 @@ const ProductFeature: React.FC<ProductFeatureProps> = ({
     <div className="relative">
       <div 
         className={`flex flex-col ${isReversed ? 'md:flex-row-reverse' : 'md:flex-row'} 
-          items-center gap-6 md:gap-12 frost-glass p-6 rounded-lg hover-scale ${getAnimationClass()} cursor-pointer`}
+          items-center gap-6 md:gap-12 frost-glass p-6 rounded-lg hover-scale ${getAnimationClass()} ${detailsContent ? 'cursor-pointer' : ''}`}
         onClick={() => detailsContent && setShowDetails(!showDetails)}
       >
         <div className={`flex-shrink-0 rounded-full p-6 ${iconBackground} w-24 h-24 flex items-center justify-center text-white transform transition-transform hover:scale-110 hover:rotate-3`}>

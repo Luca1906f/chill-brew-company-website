@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
@@ -7,7 +8,7 @@ import AboutSection from '@/components/AboutSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 import ProductFeature from '@/components/ProductFeature';
-import { ThermometerSnowflake, ThermometerSun, Battery, Clock, Shield, Palette, Video } from 'lucide-react';
+import { ThermometerSnowflake, ThermometerSun, Battery, Clock, Shield, Palette, Video, BluetoothConnected, BatteryCharging } from 'lucide-react';
 import LookbookSection from '@/components/LookbookSection';
 
 const Index = () => {
@@ -128,6 +129,94 @@ const Index = () => {
                   title="All-Day Battery" 
                   description="A single charge powers TempCup for up to 24 hours. The wireless charging base makes recharging simple and convenient."
                   iconBackground="bg-gradient-to-br from-green-400 to-emerald-500"
+                  detailsContent={
+                    <div className="space-y-4">
+                      <p>Our high-capacity lithium-ion battery ensures your beverage stays at the perfect temperature all day long. No more lukewarm coffee or melted ice!</p>
+                      <div className="grid grid-cols-2 gap-2">
+                        <div className="frost-glass p-2 rounded flex items-center gap-2">
+                          <span className="text-emerald-400">●</span>
+                          <span className="text-sm">24+ hour runtime</span>
+                        </div>
+                        <div className="frost-glass p-2 rounded flex items-center gap-2">
+                          <span className="text-emerald-400">●</span>
+                          <span className="text-sm">Fast charging</span>
+                        </div>
+                        <div className="frost-glass p-2 rounded flex items-center gap-2">
+                          <span className="text-emerald-400">●</span>
+                          <span className="text-sm">Battery level indicator</span>
+                        </div>
+                        <div className="frost-glass p-2 rounded flex items-center gap-2">
+                          <span className="text-emerald-400">●</span>
+                          <span className="text-sm">Energy-efficient design</span>
+                        </div>
+                      </div>
+                    </div>
+                  }
+                />
+              </div>
+              
+              <div className="feature-item opacity-0">
+                <ProductFeature 
+                  icon={<BluetoothConnected size={32} />} 
+                  title="Smart Bluetooth Connection" 
+                  description="Control your cup's temperature precisely through our smartphone app with an easy Bluetooth connection."
+                  isReversed={true}
+                  iconBackground="bg-gradient-to-br from-blue-500 to-purple-500"
+                  detailsContent={
+                    <div className="space-y-4">
+                      <p>Seamlessly connect to your TempCup through our dedicated app. Set exact temperatures, create schedules, and receive notifications when your drink is at the perfect temperature.</p>
+                      <div className="grid grid-cols-2 gap-2">
+                        <div className="frost-glass p-2 rounded flex items-center gap-2">
+                          <span className="text-blue-400">●</span>
+                          <span className="text-sm">Easy pairing</span>
+                        </div>
+                        <div className="frost-glass p-2 rounded flex items-center gap-2">
+                          <span className="text-blue-400">●</span>
+                          <span className="text-sm">App temperature control</span>
+                        </div>
+                        <div className="frost-glass p-2 rounded flex items-center gap-2">
+                          <span className="text-blue-400">●</span>
+                          <span className="text-sm">Drink tracking</span>
+                        </div>
+                        <div className="frost-glass p-2 rounded flex items-center gap-2">
+                          <span className="text-blue-400">●</span>
+                          <span className="text-sm">Custom profiles</span>
+                        </div>
+                      </div>
+                    </div>
+                  }
+                />
+              </div>
+              
+              <div className="feature-item opacity-0">
+                <ProductFeature 
+                  icon={<BatteryCharging size={32} />} 
+                  title="Wireless Charging Station" 
+                  description="Our custom induction charging station powers up your TempCup without any cables or hassle."
+                  iconBackground="bg-gradient-to-br from-amber-400 to-orange-500"
+                  detailsContent={
+                    <div className="space-y-4">
+                      <p>The sleek TempCharge station is designed to complement your TempCup, providing effortless wireless charging at home or in the office. Just place your cup on the base and it starts charging automatically.</p>
+                      <div className="grid grid-cols-2 gap-2">
+                        <div className="frost-glass p-2 rounded flex items-center gap-2">
+                          <span className="text-amber-400">●</span>
+                          <span className="text-sm">Effortless charging</span>
+                        </div>
+                        <div className="frost-glass p-2 rounded flex items-center gap-2">
+                          <span className="text-amber-400">●</span>
+                          <span className="text-sm">LED charging indicator</span>
+                        </div>
+                        <div className="frost-glass p-2 rounded flex items-center gap-2">
+                          <span className="text-amber-400">●</span>
+                          <span className="text-sm">Compact design</span>
+                        </div>
+                        <div className="frost-glass p-2 rounded flex items-center gap-2">
+                          <span className="text-amber-400">●</span>
+                          <span className="text-sm">Auto-shutdown</span>
+                        </div>
+                      </div>
+                    </div>
+                  }
                 />
               </div>
               
@@ -138,6 +227,29 @@ const Index = () => {
                   description="Set your cup to be ready at specific times. Wake up to a perfectly heated coffee or have a chilled drink waiting for you after work."
                   isReversed={true}
                   iconBackground="bg-gradient-to-br from-purple-400 to-violet-500"
+                  detailsContent={
+                    <div className="space-y-4">
+                      <p>Plan your perfect drink experiences throughout the day. The TempCup app lets you create temperature schedules so your beverage is always ready exactly when you want it.</p>
+                      <div className="grid grid-cols-2 gap-2">
+                        <div className="frost-glass p-2 rounded flex items-center gap-2">
+                          <span className="text-violet-400">●</span>
+                          <span className="text-sm">Custom schedules</span>
+                        </div>
+                        <div className="frost-glass p-2 rounded flex items-center gap-2">
+                          <span className="text-violet-400">●</span>
+                          <span className="text-sm">Temperature presets</span>
+                        </div>
+                        <div className="frost-glass p-2 rounded flex items-center gap-2">
+                          <span className="text-violet-400">●</span>
+                          <span className="text-sm">Smart reminders</span>
+                        </div>
+                        <div className="frost-glass p-2 rounded flex items-center gap-2">
+                          <span className="text-violet-400">●</span>
+                          <span className="text-sm">Energy optimization</span>
+                        </div>
+                      </div>
+                    </div>
+                  }
                 />
               </div>
               
@@ -147,6 +259,29 @@ const Index = () => {
                   title="Durable Design" 
                   description="Made from premium stainless steel and BPA-free materials, TempCup is built to last. The spill-proof lid ensures worry-free transport."
                   iconBackground="bg-gradient-to-br from-gray-600 to-gray-800"
+                  detailsContent={
+                    <div className="space-y-4">
+                      <p>We've engineered TempCup to withstand the rigors of daily use. With premium materials and a robust construction, your TempCup can handle drops, bumps, and everyday adventures.</p>
+                      <div className="grid grid-cols-2 gap-2">
+                        <div className="frost-glass p-2 rounded flex items-center gap-2">
+                          <span className="text-gray-400">●</span>
+                          <span className="text-sm">Impact-resistant</span>
+                        </div>
+                        <div className="frost-glass p-2 rounded flex items-center gap-2">
+                          <span className="text-gray-400">●</span>
+                          <span className="text-sm">Premium materials</span>
+                        </div>
+                        <div className="frost-glass p-2 rounded flex items-center gap-2">
+                          <span className="text-gray-400">●</span>
+                          <span className="text-sm">Spill-proof guarantee</span>
+                        </div>
+                        <div className="frost-glass p-2 rounded flex items-center gap-2">
+                          <span className="text-gray-400">●</span>
+                          <span className="text-sm">Dishwasher-safe lid</span>
+                        </div>
+                      </div>
+                    </div>
+                  }
                 />
               </div>
             </div>
