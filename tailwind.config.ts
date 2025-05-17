@@ -50,10 +50,12 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				// Custom colors
-				'cool-blue': '#0EA5E9',
-				'warm-red': '#F97316',
-				'dark-blue': '#1A1F2C',
-				'light-gray': '#F1F0FB',
+				'cool-blue': '#59C4FF',
+				'warm-red': '#FF7B54',
+				'dark-blue': '#0E1525',
+				'dark-gray': '#1A1F2C',
+				'light-gray': '#2D3748',
+				'neon-purple': '#8B5CF6',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

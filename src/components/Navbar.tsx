@@ -11,7 +11,7 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-100">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-dark-blue/90 backdrop-blur-md border-b border-white/5">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <a href="/" className="flex items-center">
           <span className="text-xl font-bold bg-gradient-to-r from-cool-blue to-warm-red bg-clip-text text-transparent">
@@ -21,27 +21,30 @@ const Navbar: React.FC = () => {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-8">
-          <a href="#features" className="text-gray-600 hover:text-cool-blue transition-colors">
+          <a href="#features" className="text-gray-300 hover:text-cool-blue transition-colors">
             Features
           </a>
-          <a href="#how-it-works" className="text-gray-600 hover:text-cool-blue transition-colors">
+          <a href="#how-it-works" className="text-gray-300 hover:text-cool-blue transition-colors">
             How It Works
           </a>
-          <a href="#about" className="text-gray-600 hover:text-cool-blue transition-colors">
-            About Us
+          <a href="#design" className="text-gray-300 hover:text-cool-blue transition-colors">
+            Design
           </a>
-          <a href="#contact" className="text-gray-600 hover:text-cool-blue transition-colors">
+          <a href="#about" className="text-gray-300 hover:text-cool-blue transition-colors">
+            About
+          </a>
+          <a href="#contact" className="text-gray-300 hover:text-cool-blue transition-colors">
             Contact
           </a>
         </div>
 
         <Button className="hidden md:block bg-gradient-to-r from-cool-blue to-warm-red hover:opacity-90 transition-opacity">
-          Pre-Order Now
+          Design Your Cup
         </Button>
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-gray-500 hover:text-gray-700 focus:outline-none"
+          className="md:hidden text-gray-300 hover:text-white focus:outline-none"
           onClick={toggleMenu}
         >
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -50,38 +53,45 @@ const Navbar: React.FC = () => {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white border-t border-gray-100 animate-fade-in">
+        <div className="md:hidden bg-dark-gray border-t border-white/5 animate-fade-in">
           <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
             <a
               href="#features"
-              className="text-gray-600 hover:text-cool-blue py-2 transition-colors"
+              className="text-gray-300 hover:text-cool-blue py-2 transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               Features
             </a>
             <a
               href="#how-it-works"
-              className="text-gray-600 hover:text-cool-blue py-2 transition-colors"
+              className="text-gray-300 hover:text-cool-blue py-2 transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               How It Works
             </a>
             <a
-              href="#about"
-              className="text-gray-600 hover:text-cool-blue py-2 transition-colors"
+              href="#design"
+              className="text-gray-300 hover:text-cool-blue py-2 transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
-              About Us
+              Design
+            </a>
+            <a
+              href="#about"
+              className="text-gray-300 hover:text-cool-blue py-2 transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              About
             </a>
             <a
               href="#contact"
-              className="text-gray-600 hover:text-cool-blue py-2 transition-colors"
+              className="text-gray-300 hover:text-cool-blue py-2 transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               Contact
             </a>
             <Button className="bg-gradient-to-r from-cool-blue to-warm-red hover:opacity-90 transition-opacity w-full">
-              Pre-Order Now
+              Design Your Cup
             </Button>
           </div>
         </div>

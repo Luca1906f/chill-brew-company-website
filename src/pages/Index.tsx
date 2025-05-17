@@ -3,39 +3,40 @@ import React from 'react';
 import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
 import HowItWorks from '@/components/HowItWorks';
+import CupDesigner from '@/components/CupDesigner';
 import AboutSection from '@/components/AboutSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 import ProductFeature from '@/components/ProductFeature';
-import { Snowflake, Flame, Battery, Clock, Shield } from 'lucide-react';
+import { ThermometerSnowflake, ThermometerSun, Battery, Clock, Shield } from 'lucide-react';
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-dark-blue text-white">
       <Navbar />
       
       <main>
         <HeroSection />
         
-        <section id="features" className="py-16 md:py-24">
+        <section id="features" className="py-16 md:py-24 bg-dark-gray">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Revolutionary Features</h2>
-              <p className="text-lg text-gray-600">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 gradient-text">Revolutionary Features</h2>
+              <p className="text-lg text-gray-300">
                 TempCup combines advanced technology with sleek design to deliver the perfect temperature experience.
               </p>
             </div>
             
             <div className="grid gap-16 max-w-4xl mx-auto">
               <ProductFeature 
-                icon={<Snowflake size={32} />} 
+                icon={<ThermometerSnowflake size={32} />} 
                 title="Cooling Technology" 
                 description="Keep your cold drinks perfectly chilled for up to 8 hours, no matter the outside temperature. Our proprietary cooling system maintains the ideal temperature without freezing."
                 iconBackground="bg-gradient-to-br from-blue-400 to-cool-blue"
               />
               
               <ProductFeature 
-                icon={<Flame size={32} />} 
+                icon={<ThermometerSun size={32} />} 
                 title="Heating Control" 
                 description="Maintain your hot beverages at your preferred temperature for hours. Adjust the exact temperature via our companion app for the perfect sipping experience."
                 isReversed={true}
@@ -68,6 +69,7 @@ const Index = () => {
         </section>
         
         <HowItWorks />
+        <CupDesigner />
         <AboutSection />
         <ContactSection />
       </main>
